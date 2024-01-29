@@ -89,18 +89,19 @@ export default function App() {
     window.location.reload();
   }
   return (
-    <div className=" min-h-screen p-5 bg-gray-800" style={{ backgroundImage: `url(${bg})` }}>
+    <div className="min-h-screen p-5 bg-gray-800 " style={{ backgroundImage: `url(${bg})` }}>
       <div>
         <h1 className="text-3xl font-bold text-center text-white underline">
           BlackJack
         </h1>
+        <br/>
         <div className='sm:flex sm:justify-center'>
           <div className='flex justify-center gap-7 me-5'>
-            <p className='text-green-500  text-center  flex justify-center mx-auto text-xl'>Dinero Actual:<span className='ms-2 text-xl'>{Dinero}</span></p>
-            <p className='text-yellow-500  text-center flex justify-center mx-auto text-xl'>Apuesta:<span className='ms-2 text-xl'>{Apuesta}</span></p>
+            <p className='flex justify-center mx-auto text-xl text-center text-green-500'>Dinero Actual:<span className='text-xl ms-2'>{Dinero}</span></p>
+            <p className='flex justify-center mx-auto text-xl text-center text-yellow-500'>Apuesta:<span className='text-xl ms-2'>{Apuesta}</span></p>
           </div>
           {!BlackJackVisible && (
-            <p className='text-white text-center flex justify-center text-xl pt-5 sm:pt-0'>
+            <p className='flex justify-center pt-5 text-xl text-center text-white sm:pt-0'>
               <button onClick={() => resetApuesta()} className='bg-amber-600 px-2 py-0.5 rounded-md ms-2'>Reset</button>
             </p>
           )}
@@ -111,12 +112,12 @@ export default function App() {
 
 
       <div className='flex items-center justify-center pt-20 md:min-h-full md:pt-5 '>
-        <div className="w-full border-8 border-solid rounded-lg h-full border-amber-950 sm:w-3/5 md:w-2/5 ">
-          <div className="flex flex-wrap justify-center w-full h-full px-5 py-24 md:p-5 bg-gray-600 bg-opacity-80 ">
-            {botonVisible && (<div className='flex flex-wrap w-full justify-center'>
-              <button onClick={HandleBoton} className='bg-gray-400 rounded-md p-2'> Empezar partida</button>
+        <div className="w-full h-full border-8 border-solid rounded-lg border-amber-950 sm:w-3/5 md:w-2/5 ">
+          <div className="flex flex-wrap justify-center w-full h-full px-5 py-24 bg-gray-600 md:p-5 bg-opacity-80 ">
+            {botonVisible && (<div className='flex flex-wrap justify-center w-full'>
+              <button onClick={HandleBoton} className='p-2 bg-gray-400 rounded-md'> Empezar partida</button>
               {error &&
-                (<p className='text-red-600 w-full text-center font-bold'>* Debes hacer una apuesta obligatoriamente</p>)}
+                (<p className='w-full font-bold text-center text-red-600'>* Debes hacer una apuesta obligatoriamente</p>)}
             </div>)}
             {BlackJackVisible && (
               <BlackJack
@@ -127,11 +128,11 @@ export default function App() {
               />
             )}
             {visibleApuestas && (
-              <div className='mt-10 flex w-full justify-center'>
-                <img src={casino25} onClick={() => apostar(25)} className='w-1/5 me-2 cursor-pointer' />
+              <div className='flex justify-center w-full mt-10'>
+                <img src={casino25} onClick={() => apostar(25)} className='w-1/5 cursor-pointer me-2' />
                 <img src={casino50} onClick={() => apostar(50)} className='w-1/4 cursor-pointer' />
                 <img src={casino100} onClick={() => apostar(100)} className='w-1/4 cursor-pointer' />
-                <img src={casino500} onClick={() => apostar(500)} className='w-1/5 ms-2 cursor-pointer' />
+                <img src={casino500} onClick={() => apostar(500)} className='w-1/5 cursor-pointer ms-2' />
               </div>
             )}
           </div>
