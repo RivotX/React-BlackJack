@@ -42,6 +42,10 @@ import onceTrebol from "../img/jack_of_clubs2.png";
 import onceDiamantes from "../img/jack_of_diamonds2.png";
 import onceEspadas from "../img/jack_of_spades2.png";
 import onceCorazones from "../img/jack_of_hearts2.png";
+import reinaDiamantes from "../img/queen_of_diamonds2.png";
+import reinaEspadas from "../img/queen_of_spades2.png";
+import reinaCorazones from "../img/queen_of_hearts2.png"
+import reinaTrebol from "../img/queen_of_clubs2.png"
 import reyTrebol from "../img/king_of_clubs2.png";
 import reyEspadas from "../img/king_of_spades2.png";
 import reyDiamantes from "../img/king_of_diamonds2.png";
@@ -93,6 +97,10 @@ const cards = [
     { valuee: [10], img: onceDiamantes },
     { valuee: [10], img: onceEspadas },
     { valuee: [10], img: onceCorazones },
+    { valuee: [10], img: reinaCorazones },
+    { valuee: [10], img: reinaEspadas },
+    { valuee: [10], img: reinaDiamantes },
+    { valuee: [10], img: reinaTrebol },
     { valuee: [10], img: reyTrebol },
     { valuee: [10], img: reyEspadas },
     { valuee: [10], img: reyDiamantes },

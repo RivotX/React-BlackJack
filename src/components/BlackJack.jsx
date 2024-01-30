@@ -16,11 +16,11 @@ function BlackJack({ onPerdidoChange, onGanadoChange, onEmpateChange }) {
     let empate = false;
 
     const generarCartas = () => {
-        const randomNumber1 = Math.floor(Math.random() * 48);
-        const randomNumberE = Math.floor(Math.random() * 48);
-        const randomNumber3 = Math.floor(Math.random() * 48);
+        const randomNumber1 = Math.floor(Math.random() * 52);
+        const randomNumberE = Math.floor(Math.random() * 52);
+        const randomNumber3 = Math.floor(Math.random() * 52);
         setCartas([{ img: cards[randomNumber1].img, value: cards[randomNumber1].valuee }]);
-        setcartasEnemigo([{ img: cards[randomNumberE].img, value: cards[randomNumberE].valuee }, { img: cards[48].img, value: cards[randomNumber3].valuee }]);
+        setcartasEnemigo([{ img: cards[randomNumberE].img, value: cards[randomNumberE].valuee }, { img: cards[52].img, value: cards[randomNumber3].valuee }]);
         setcontador(cards[randomNumber1].valuee[0]);
         setcontadorEnemigo(cards[randomNumberE].valuee[0]);
         setRandomNumber3(randomNumber3);
@@ -31,7 +31,7 @@ function BlackJack({ onPerdidoChange, onGanadoChange, onEmpateChange }) {
     }, []);
 
     const handlePedir = () => {
-        const randomNumber = Math.floor(Math.random() * 48);
+        const randomNumber = Math.floor(Math.random() * 52);
         setCartas([...cartas, { img: cards[randomNumber].img, value: cards[randomNumber].valuee }]);
     };
 
@@ -39,28 +39,28 @@ function BlackJack({ onPerdidoChange, onGanadoChange, onEmpateChange }) {
         if (!isPlantado) {
             let nuevoContadorEnemigo = 0;
             let asesEnemigo = 0;
-    
+
             // Calcular el contador del crupier
             cartasEnemigo.forEach((carta) => {
                 let valorCarta = carta.value[0];
                 if (carta.value.length > 1) {
                     asesEnemigo++;
                     if (nuevoContadorEnemigo + 11 <= 21) {
-                        valorCarta = carta.value[1]; 
+                        valorCarta = carta.value[1];
                     }
                 }
                 nuevoContadorEnemigo += valorCarta;
             });
-    
+
             setisPlantado(true);
             const nuevasCartasEnemigo = [...cartasEnemigo];
-            nuevasCartasEnemigo[1] = { ...nuevasCartasEnemigo[1], img: cards[randomNumber3].img }; 
-            setcartasEnemigo(nuevasCartasEnemigo); 
-    
+            nuevasCartasEnemigo[1] = { ...nuevasCartasEnemigo[1], img: cards[randomNumber3].img };
+            setcartasEnemigo(nuevasCartasEnemigo);
+
             // Pedir cartas adicionales si el contador del crupier es menor que 17
             if (nuevoContadorEnemigo < 17) {
                 while (nuevoContadorEnemigo < 17) {
-                    const newRandomNumber = Math.floor(Math.random() * 48);
+                    const newRandomNumber = Math.floor(Math.random() * 52);
                     const nuevaCarta = { img: cards[newRandomNumber].img, value: cards[newRandomNumber].valuee };
                     nuevasCartasEnemigo.push(nuevaCarta);
                     nuevoContadorEnemigo = nuevasCartasEnemigo.reduce((total, carta) => total + parseInt(carta.value), 0);
@@ -77,7 +77,7 @@ function BlackJack({ onPerdidoChange, onGanadoChange, onEmpateChange }) {
             setJuegoFinalizado(true);
         }
     }
-    
+
 
     //contador jugador
     useEffect(() => {
