@@ -110,7 +110,6 @@ export default function App() {
 
       </div>
 
-
       <div className='flex items-center justify-center pt-20 md:min-h-full md:pt-5 '>
         <div className="w-full h-full border-8 border-solid rounded-lg border-amber-950 sm:w-3/5 md:w-2/5 ">
           <div className="flex flex-wrap justify-center w-full h-full px-5 py-24 bg-gray-600 md:p-5 bg-opacity-80 ">
