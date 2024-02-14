@@ -30,19 +30,19 @@ export default function App() {
   const handlePerdidoChange = (nuevoEstado) => {
     setTimeout(() => {
       setPerdido(nuevoEstado);
-    }, 500);
+    }, 700);
   };
 
   const handleGanadoChange = (nuevoEstado) => {
     setTimeout(() => {
       setGanado(nuevoEstado);
-    }, 500);
+    }, 700);
   };
 
   const handleEmpateChange = (nuevoEstado) => {
     setTimeout(() => {
       setEmpate(nuevoEstado);
-    }, 500);
+    }, 700);
   };
 
   const HandleBoton = () => {
