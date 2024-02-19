@@ -1,2 +1,2 @@
-# BlackJack game using react
+BlackJack game using react
 
