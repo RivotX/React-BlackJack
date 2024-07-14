@@ -1,6 +1,6 @@
 # BlackJack Game
 
-A BlackJack game built using React.
+BlackJack game built using React.
 
 ### Prerequisites
 
