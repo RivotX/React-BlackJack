@@ -1,10 +1,6 @@
 # BlackJack Game
 
-A simple BlackJack game built using React.
-
-## Getting Started
-
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+A BlackJack game built using React.
 
 ### Prerequisites
 
@@ -20,6 +16,6 @@ Make sure you have Node.js and npm installed on your machine.
 	```
 
 ### Running the Game
-run: 
-```bash
-npm run dev
+	run: 
+	```bash
+	npm run dev
