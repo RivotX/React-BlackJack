@@ -4,8 +4,8 @@ import { useState } from 'react';
 import ModalResultado from "./components/ModalResultado";
 import XD from './img/XD.png'
 import clown from './img/clown.png'
-import gigachad from './img/gigachad.png'
-import gigachad2 from './img/gigachad2.png'
+import gigachad from './img/Gigachad.png'
+import gigachad2 from './img/Gigachad2.png'
 import pokerface from './img/._..png'
 import casino25 from './img/casino25.png'
 import casino50 from './img/casino50.png'
@@ -97,12 +97,12 @@ export default function App() {
         <br/>
         <div className='sm:flex sm:justify-center'>
           <div className='flex justify-center gap-7 me-5'>
-            <p className='flex justify-center mx-auto text-xl text-center text-green-500'>Dinero Actual:<span className='text-xl ms-2'>{Dinero}</span></p>
-            <p className='flex justify-center mx-auto text-xl text-center text-yellow-500'>Apuesta:<span className='text-xl ms-2'>{Apuesta}</span></p>
+            <p className='flex justify-center mx-auto text-xl text-center text-green-500'>Current Money:<span className='text-xl ms-2'>{Dinero}</span></p>
+            <p className='flex justify-center mx-auto text-xl text-center text-yellow-500'>Bet:<span className='text-xl ms-2'>{Apuesta}</span></p>
           </div>
           {!BlackJackVisible && (
             <p className='flex justify-center pt-5 text-xl text-center text-white sm:pt-0'>
-              <button onClick={() => resetApuesta()} className='bg-amber-600 px-2 py-0.5 rounded-md ms-2'>Reset</button>
+              <button onClick={() => resetApuesta()} className='bg-amber-600 px-2 py-0.5 rounded-md ms-2'>Reset bet</button>
             </p>
           )}
 
@@ -114,9 +114,9 @@ export default function App() {
         <div className="w-full h-full border-8 border-solid rounded-lg border-amber-950 sm:w-3/5 md:w-2/5 ">
           <div className="flex flex-wrap justify-center w-full h-full px-5 py-24 bg-gray-600 md:p-5 bg-opacity-80 ">
             {botonVisible && (<div className='flex flex-wrap justify-center w-full'>
-              <button onClick={HandleBoton} className='p-2 bg-gray-400 rounded-md'> Empezar partida</button>
+              <button onClick={HandleBoton} className='p-2 bg-gray-400 rounded-md'> Start game </button>
               {error &&
-                (<p className='w-full font-bold text-center text-red-600'>* Debes hacer una apuesta obligatoriamente</p>)}
+                (<p className='w-full font-bold text-center text-red-600'>* You must place a bet</p>)}
             </div>)}
             {BlackJackVisible && (
               <BlackJack
@@ -139,20 +139,20 @@ export default function App() {
       </div>
       {/* Renderizar Modal resultado*/}
       {perdido && BlackJackVisible && (
-        <ModalResultado texto={"🤣🤡XDD Has perdido (you lost) XDXD🤡🤣"} img={clown} img2={XD} img3={XD} img4={clown} onClick={clickmodal} botonTexto="Jugar de nuevo" />
+        <ModalResultado texto={"🤣🤡XDD You lost XDXD🤡🤣"} img={clown} img2={XD} img3={XD} img4={clown} onClick={clickmodal} botonTexto="Play Again" />
 
       )}
       {/* Renderizar Modal has ganado*/}
       {ganado && BlackJackVisible && (
-        <ModalResultado texto={"🗿You won, easy game🗿"} img={gigachad} img2={gigachad2} img3={gigachad2} img4={gigachad} onClick={clickmodal} botonTexto="Jugar de nuevo" />
+        <ModalResultado texto={"🗿You won, easy game🗿"} img={gigachad} img2={gigachad2} img3={gigachad2} img4={gigachad} onClick={clickmodal} botonTexto="Play Again" />
       )}
       {/* Renderizar Modal has ganado*/}
       {empate && BlackJackVisible && (
-        <ModalResultado texto={"empate (draw)"} img={pokerface} img2={pokerface} img3={pokerface} img4={pokerface} onClick={clickmodal} botonTexto="Juegar de nuevo" />
+        <ModalResultado texto={"Draw "} img={pokerface} img2={pokerface} img3={pokerface} img4={pokerface} onClick={clickmodal} botonTexto="Play AgainPlay" />
       )}
       {/* Renderizar Modal no tienes dinero*/}
       {Dinero == 0 && Apuesta == 0 && (
-        <ModalResultado texto={"💰💲Te quedaste sin dinero💲💰"} img={pobre} img2={pobre2} img3={pobre2} img4={pobre} onClick={reset} botonTexto="Intentarlo otra vez" />
+        <ModalResultado texto={"💰💲You ran out of money💲💰"} img={pobre} img2={pobre2} img3={pobre2} img4={pobre} onClick={reset} botonTexto="Try Again" />
       )}
 
     </div>

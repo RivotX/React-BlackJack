@@ -262,9 +262,9 @@ function BlackJack({ onPerdidoChange, onGanadoChange, onEmpateChange }) {
             </div>
             <div className="flex items-center justify-between w-full mt-4 rounded-md">
                 <button className="w-2/5 p-2 bg-gray-200 rounded-lg" onClick={handlePedir}>
-                    Pedir carta
+                    Draw card
                 </button>
-                <button className="w-2/5 p-2 bg-gray-200 rounded-lg" onClick={handlePlantarse}>Plantarse</button>
+                <button className="w-2/5 p-2 bg-gray-200 rounded-lg" onClick={handlePlantarse}>Stand</button>
             </div>
         </>
     );
