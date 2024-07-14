@@ -16,8 +16,6 @@ Make sure you have Node.js and npm installed on your machine.
     ```
 
 ### Running the Game
+run: 
 ```bash
 npm run dev
-```
-
-	
